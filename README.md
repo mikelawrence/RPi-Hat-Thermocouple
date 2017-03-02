@@ -7,6 +7,9 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 ## KiCad Design
 PCB designed in [KiCad](http://kicad-pcb.org) which is a free EDA toolset that works great! This PCB is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by Xess Corp.
 
+## Bill of Materials
+You can order from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=00ba6ee981).
+
 ## Status
 Board has been ordered from OSH Park but has not been tested.
 
