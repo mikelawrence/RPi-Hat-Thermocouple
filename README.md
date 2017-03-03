@@ -14,3 +14,6 @@ You can order from Mouser using this [shared BOM](http://www.mouser.com/ProjectM
 Board has been ordered from OSH Park but has not been tested.
 
 [![OSH Park](https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png)](https://oshpark.com/shared_projects/kyDU2zJh)
+
+## Board Preview
+<img src="meta/RPi-Hat-Thermocouple-brd.png" style="width:100%">

@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 15.578572 19.3 118.671429 97.700001)
     (thickness 1.6)
-    (drawings 45)
+    (drawings 47)
     (tracks 233)
     (zones 0)
     (modules 32)
@@ -16,14 +16,16 @@
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
-    (34 B.Paste user hide)
-    (35 F.Paste user hide)
+    (34 B.Paste user)
+    (35 F.Paste user)
     (36 B.SilkS user)
     (37 F.SilkS user)
-    (38 B.Mask user hide)
-    (39 F.Mask user hide)
+    (38 B.Mask user)
+    (39 F.Mask user)
     (40 Dwgs.User user hide)
-    (44 Edge.Cuts user)
+    (44 Edge.Cuts user hide)
+    (48 B.Fab user hide)
+    (49 F.Fab user hide)
   )
 
   (setup
@@ -61,7 +63,7 @@
     (pad_to_mask_clearance 0)
     (pad_to_paste_clearance -0.07)
     (aux_axis_origin 26 86)
-    (visible_elements 7FFEFFFF)
+    (visible_elements 7FFFFF7F)
     (pcbplotparams
       (layerselection 0x00008_00000001)
       (usegerberextensions false)
@@ -211,7 +213,7 @@
     (uvia_drill 0.1)
   )
 
-  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58AE0E34) (tstamp 58AE0E36)
+  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58B9C9FB) (tstamp 58AE0E36)
     (at 44 61.5 180)
     (descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
@@ -220,7 +222,7 @@
     (fp_text reference U3 (at 0 -3.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab)
+    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.95 -2.45) (end 1.95 -2.45) (layer F.Fab) (width 0.15))
@@ -341,7 +343,7 @@
       (solder_mask_margin 1.725) (clearance 1.725))
   )
 
-  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58AE0E21) (tstamp 58AE0D67)
+  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58B9CAB6) (tstamp 58AE0D67)
     (at 55 48 270)
     (descr "PhoenixContact PTSM0,5 2 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814702/pdf")
     (tags "PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector ")
@@ -350,7 +352,7 @@
     (fp_text reference J2 (at 4 3.5 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
     )
-    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab)
+    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.5 -4.63) (end 6.5 -4.63) (layer F.CrtYd) (width 0.05))
@@ -379,7 +381,7 @@
     (pad "" smd rect (at -5.05 -1.58 90) (size 2.3 5.6) (layers F.Cu F.Paste F.Mask))
   )
 
-  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58AE0E1B) (tstamp 58AE0D81)
+  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58B9CAB2) (tstamp 58AE0D81)
     (at 55 61.5 270)
     (descr "PhoenixContact PTSM0,5 2 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814702/pdf")
     (tags "PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector ")
@@ -388,7 +390,7 @@
     (fp_text reference J3 (at 4 3.5 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
     )
-    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab)
+    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.5 -4.63) (end 6.5 -4.63) (layer F.CrtYd) (width 0.05))
@@ -417,7 +419,7 @@
     (pad "" smd rect (at -5.05 -1.58 90) (size 2.3 5.6) (layers F.Cu F.Paste F.Mask))
   )
 
-  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58AE0E11) (tstamp 58AE0D9B)
+  (module Connectors_Phoenix:PhoenixContact_PTSM0,5_2-2,5-V_SMD (layer F.Cu) (tedit 58B9CAAD) (tstamp 58AE0D9B)
     (at 55 75 270)
     (descr "PhoenixContact PTSM0,5 2 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814702/pdf")
     (tags "PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector ")
@@ -426,7 +428,7 @@
     (fp_text reference J4 (at 4 3.5 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
     )
-    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab)
+    (fp_text value "Push Terminal" (at -0.2 -5.43 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.5 -4.63) (end 6.5 -4.63) (layer F.CrtYd) (width 0.05))
@@ -455,7 +457,7 @@
     (pad "" smd rect (at -5.05 -1.58 90) (size 2.3 5.6) (layers F.Cu F.Paste F.Mask))
   )
 
-  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58AE1119) (tstamp 58AE0DFE)
+  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58B9CABC) (tstamp 58AE0DFE)
     (at 85.5 42 180)
     (descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
@@ -464,7 +466,7 @@
     (fp_text reference U1 (at 0 3.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AT24CS32 (at 0 3.5 180) (layer F.Fab)
+    (fp_text value AT24CS32 (at 0 3.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.95 -2.45) (end 1.95 -2.45) (layer F.Fab) (width 0.15))
@@ -506,7 +508,7 @@
     )
   )
 
-  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58AE0E32) (tstamp 58AE0E1A)
+  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58B9C9E2) (tstamp 58AE0E1A)
     (at 44 48 180)
     (descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
@@ -515,7 +517,7 @@
     (fp_text reference U2 (at 0 -3.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab)
+    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.95 -2.45) (end 1.95 -2.45) (layer F.Fab) (width 0.15))
@@ -556,7 +558,7 @@
     )
   )
 
-  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 54130A77) (tstamp 58AE0E52)
+  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58B9CA10) (tstamp 58AE0E52)
     (at 44 75 180)
     (descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
@@ -565,7 +567,7 @@
     (fp_text reference U4 (at 0 -3.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab)
+    (fp_text value MAX31855 (at 0 3.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.95 -2.45) (end 1.95 -2.45) (layer F.Fab) (width 0.15))
@@ -606,7 +608,7 @@
     )
   )
 
-  (module Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm (layer F.Cu) (tedit 58AE0E2D) (tstamp 58AE0E71)
+  (module Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm (layer F.Cu) (tedit 58B9C9AE) (tstamp 58AE0E71)
     (at 33 43 180)
     (descr "16-Lead Plastic Thin Shrink Small Outline (ST)-4.4 mm Body [TSSOP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SSOP 0.65")
@@ -615,7 +617,7 @@
     (fp_text reference U5 (at -2.5 4 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 74LVC139 (at 0 3.55 180) (layer F.Fab)
+    (fp_text value 74LVC139 (at 0 3.55 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1.2 -2.5) (end 2.2 -2.5) (layer F.Fab) (width 0.15))
@@ -668,7 +670,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE0FF9) (tstamp 58AE1579)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D675) (tstamp 58AE1579)
     (at 33 46.75 180)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -677,10 +679,10 @@
     (fp_text reference C8 (at 0 -1.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 180) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -704,7 +706,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE1338) (tstamp 58AE1BC4)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D6BE) (tstamp 58AE1BC4)
     (at 85.5 45.75)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -713,10 +715,10 @@
     (fp_text reference C1 (at 2.5 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -740,7 +742,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE130B) (tstamp 58AE1BD4)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D67C) (tstamp 58AE1BD4)
     (at 44 44.5 180)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -749,10 +751,10 @@
     (fp_text reference C2 (at 0 1.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 180) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -776,7 +778,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE1306) (tstamp 58AE1BE4)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D66F) (tstamp 58AE1BE4)
     (at 44 58 180)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -785,10 +787,10 @@
     (fp_text reference C3 (at 0 1.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 180) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -812,7 +814,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE130F) (tstamp 58AE1BF4)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D64B) (tstamp 58AE1BF4)
     (at 44 71.5 180)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -821,10 +823,10 @@
     (fp_text reference C4 (at 0 1.5 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 180) (layer F.Fab)
+    (fp_text user %R (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -848,7 +850,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE1325) (tstamp 58AE1C04)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D672) (tstamp 58AE1C04)
     (at 50 48 270)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -857,10 +859,10 @@
     (fp_text reference C5 (at -2.5 0 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab)
+    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 270) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -884,7 +886,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE1319) (tstamp 58AE1C14)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D5FD) (tstamp 58AE1C14)
     (at 50 61.5 270)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -893,10 +895,10 @@
     (fp_text reference C6 (at -2.5 0 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab)
+    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 270) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -920,7 +922,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58AE131F) (tstamp 58AE1C24)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D5F9) (tstamp 58AE1C24)
     (at 50 75 270)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -929,10 +931,10 @@
     (fp_text reference C7 (at -2.5 0 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab)
+    (fp_text value 10nF (at 0 1.5 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5 270) (layer F.Fab)
+    (fp_text user %R (at -2.5 0 360) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -956,7 +958,7 @@
     )
   )
 
-  (module raspberry-ml:Pin_Header_Straight_2x20 locked (layer F.Cu) (tedit 58AE1331) (tstamp 58AE1C34)
+  (module raspberry-ml:Pin_Header_Straight_2x20 locked (layer F.Cu) (tedit 58B9C9C3) (tstamp 58AE1C34)
     (at 58.5 33.5 90)
     (descr "Through hole pin header")
     (tags "pin header")
@@ -964,7 +966,7 @@
     (fp_text reference J1 (at -4 0 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value RPi_GPIO (at -1.27 -27.23 90) (layer F.Fab)
+    (fp_text value RPi_GPIO (at -1.27 -27.23 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -3.02 -25.88) (end -3.02 25.92) (layer F.CrtYd) (width 0.05))
@@ -1066,7 +1068,7 @@
     )
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58AE1343) (tstamp 58AE1C6B)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D6C5) (tstamp 58AE1C6B)
     (at 79.5 44)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1075,10 +1077,10 @@
     (fp_text reference R1 (at -2.5 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1k (at 0 1.5) (layer F.Fab)
+    (fp_text value 1k (at 0 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45) (layer F.Fab)
+    (fp_text user %R (at 0 -1.45) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1102,7 +1104,7 @@
     )
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58AE133C) (tstamp 58AE1C7B)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D689) (tstamp 58AE1C7B)
     (at 79.5 40)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1111,10 +1113,10 @@
     (fp_text reference R2 (at -2.5 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 3.9k (at 0 1.5) (layer F.Fab)
+    (fp_text value 3.9k (at 0 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45) (layer F.Fab)
+    (fp_text user %R (at 0 -1.45) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1138,7 +1140,7 @@
     )
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58AE133F) (tstamp 58AE1C8B)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D6C8) (tstamp 58AE1C8B)
     (at 79.5 42)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1147,10 +1149,10 @@
     (fp_text reference R3 (at -2.5 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 3.9k (at 0 1.5) (layer F.Fab)
+    (fp_text value 3.9k (at 0 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45) (layer F.Fab)
+    (fp_text user %R (at 0 -1.45) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1174,7 +1176,7 @@
     )
   )
 
-  (module Buttons_Switches_SMD:SW_SPST_B3U-1000P-B (layer F.Cu) (tedit 58AF5ABB) (tstamp 58AF3B5E)
+  (module Buttons_Switches_SMD:SW_SPST_B3U-1000P-B (layer F.Cu) (tedit 58B9D6C2) (tstamp 58AF3B5E)
     (at 80.5 47 180)
     (descr "Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, with Boss")
     (tags "Tactile Switch")
@@ -1183,10 +1185,10 @@
     (fp_text reference SW1 (at 4 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Write (at 0 2.5 180) (layer F.Fab)
+    (fp_text value Write (at 0 2.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -2.5 180) (layer F.Fab)
+    (fp_text user %R (at 0 -2.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.4 1.65) (end 2.4 1.65) (layer F.CrtYd) (width 0.05))
@@ -1211,7 +1213,7 @@
     (pad "" np_thru_hole circle (at 0 0 180) (size 0.8 0.8) (drill 0.8) (layers *.Cu *.Mask))
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B0EA72) (tstamp 58AFB588)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D65F) (tstamp 58AFB588)
     (at 33.1 77 180)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1220,10 +1222,10 @@
     (fp_text reference R4 (at -2.4 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4.7k (at 0 1.5 180) (layer F.Fab)
+    (fp_text value 4.7k (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45 180) (layer F.Fab)
+    (fp_text user %R (at -2.4 0 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1247,7 +1249,7 @@
     )
   )
 
-  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B0AEFA) (tstamp 58B05C92)
+  (module Capacitors_SMD:C_0603 (layer F.Cu) (tedit 58B9D646) (tstamp 58B05C92)
     (at 34.6 61.5)
     (descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
     (tags "capacitor 0603")
@@ -1256,10 +1258,10 @@
     (fp_text reference C9 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5) (layer F.Fab)
+    (fp_text value 0.1uF (at 0 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.5) (layer F.Fab)
+    (fp_text user %R (at 0 -1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1283,7 +1285,7 @@
     )
   )
 
-  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 54130A77) (tstamp 58B05CAE)
+  (module Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm (layer F.Cu) (tedit 58B9C9E6) (tstamp 58B05CAE)
     (at 34.5 56.5 90)
     (descr "8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SOIC 1.27")
@@ -1292,7 +1294,7 @@
     (fp_text reference U7 (at 0 4 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DS3231M (at 0 3.5 90) (layer F.Fab)
+    (fp_text value DS3231M (at 0 3.5 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.95 -2.45) (end 1.95 -2.45) (layer F.Fab) (width 0.15))
@@ -1334,7 +1336,7 @@
     )
   )
 
-  (module Battery_Holders:Keystone_3000_1x12mm-CoinCell (layer F.Cu) (tedit 58972371) (tstamp 58B0B019)
+  (module Battery_Holders:Keystone_3000_1x12mm-CoinCell (layer F.Cu) (tedit 58B9CAE5) (tstamp 58B0B019)
     (at 81.5 71.5 90)
     (descr http://www.keyelco.com/product-pdf.cfm?p=777)
     (tags "Keystone type 3000 coin cell retainer")
@@ -1343,7 +1345,7 @@
     (fp_text reference BT1 (at 8.5 3.5 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Battery_Cell (at 0 7.5 90) (layer F.Fab)
+    (fp_text value Battery_Cell (at 0 7.5 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_arc (start 0 0) (end 0 6.75) (angle 36.6) (layer F.CrtYd) (width 0.05))
@@ -1409,7 +1411,7 @@
     )
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58AAD9CA) (tstamp 58B0D1FB)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D666) (tstamp 58B0D1FB)
     (at 36 49.5 180)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1418,10 +1420,10 @@
     (fp_text reference R5 (at -2 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DNI (at 0 1.5 180) (layer F.Fab)
+    (fp_text value DNI (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45 180) (layer F.Fab)
+    (fp_text user %R (at 0 -1.45 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1445,7 +1447,7 @@
     )
   )
 
-  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58AAD9CA) (tstamp 58B0D20C)
+  (module Resistors_SMD:R_0603 (layer F.Cu) (tedit 58B9D66A) (tstamp 58B0D20C)
     (at 36 51.5 180)
     (descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
     (tags "resistor 0603")
@@ -1454,10 +1456,10 @@
     (fp_text reference R6 (at -2 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DNI (at 0 1.5 180) (layer F.Fab)
+    (fp_text value DNI (at 0 1.5 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 -1.45 180) (layer F.Fab)
+    (fp_text user %R (at 0 -1.45 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -1481,7 +1483,7 @@
     )
   )
 
-  (module TO_SOT_Packages_THT:TO-92_Molded_Narrow (layer F.Cu) (tedit 58610942) (tstamp 58B0DA32)
+  (module TO_SOT_Packages_THT:TO-92_Molded_Narrow (layer F.Cu) (tedit 58B9D65B) (tstamp 58B0DA32)
     (at 31.23 74)
     (descr "TO-92 leads molded, narrow, drill 0.6mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
@@ -1489,10 +1491,10 @@
     (fp_text reference U6 (at 1.27 -3.56) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DS18S20 (at 1.27 2.79) (layer F.Fab)
+    (fp_text value DS18S20 (at 1.27 2.79) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 1.27 -3.56) (layer F.Fab)
+    (fp_text user %R (at 1.27 -3.56) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.53 1.85) (end 3.07 1.85) (layer F.SilkS) (width 0.12))
@@ -1518,6 +1520,30 @@
     )
   )
 
+  (dimension 65 (width 0.15) (layer F.Fab)
+    (gr_text "65 mm" (at 58.5 24.95) (layer F.Fab)
+      (effects (font (size 1.5 1.5) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 26 29) (xy 26 23.9)))
+    (feature2 (pts (xy 91 29) (xy 91 23.9)))
+    (crossbar (pts (xy 91 26) (xy 26 26)))
+    (arrow1a (pts (xy 26 26) (xy 27.126504 25.413579)))
+    (arrow1b (pts (xy 26 26) (xy 27.126504 26.586421)))
+    (arrow2a (pts (xy 91 26) (xy 89.873496 25.413579)))
+    (arrow2b (pts (xy 91 26) (xy 89.873496 26.586421)))
+  )
+  (dimension 56.000019 (width 0.15) (layer F.Fab)
+    (gr_text "56 mm" (at 96.072953 57.99668 270.0469723) (layer F.Fab) (tstamp 58B9DA02)
+      (effects (font (size 1.5 1.5) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 92.04591 86) (xy 97.145908 85.995819)))
+    (feature2 (pts (xy 92 30) (xy 97.099998 29.995819)))
+    (crossbar (pts (xy 94.999999 29.997541) (xy 95.045909 85.997541)))
+    (arrow1a (pts (xy 95.045909 85.997541) (xy 94.458565 84.871518)))
+    (arrow1b (pts (xy 95.045909 85.997541) (xy 95.631406 84.870557)))
+    (arrow2a (pts (xy 94.999999 29.997541) (xy 94.414502 31.124525)))
+    (arrow2b (pts (xy 94.999999 29.997541) (xy 95.587343 31.123564)))
+  )
   (gr_text CR1225 (at 89.5 71.5 90) (layer F.SilkS) (tstamp 58B0B1F5)
     (effects (font (size 1.5 1.5) (thickness 0.25)))
   )
