@@ -2,4 +2,5 @@ RPi-Hat-Thermocouple-BOM-export.csv
 *.numbers
 *.bak
 *.kicad_pcb-bak
-Amtech SynTECH solder paste.pdf
+*.save*
+__pycache__\
