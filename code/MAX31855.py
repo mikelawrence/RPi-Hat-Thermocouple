@@ -62,7 +62,7 @@ class MAX31855(object):
         return internal * 0.0625
 
     def readTempC(self, n=0):
-        ''' Return thermocouple n's temperature value in degrees celsius.
+        ''' Return the thermocouple temperature value in degrees celsius.
         '''
         v = self._read32(n)
         # Check for error reading value.
@@ -81,7 +81,7 @@ class MAX31855(object):
         return v * 0.25
 
     def readState(self, n=0):
-        ''' Return dictionary containing fault codes and hardware problems for sensor n
+        ''' Return dictionary containing fault codes and hardware problems
         '''
         v = self._read32(n)
         return {
@@ -92,7 +92,7 @@ class MAX31855(object):
         }
 
     def readLinearizedTempC(self, n=0):
-        '''Return the NIST-linearized thermocouple n's temperature value in degrees celsius.
+        '''Return the NIST-linearized thermocouple temperature value in degrees celsius.
         See https://learn.adafruit.com/calibrating-sensors/maxim-31855-linearization for more info.
         '''
         # MAX31855 thermocouple voltage reading in mV

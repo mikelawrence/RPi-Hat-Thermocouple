@@ -26,11 +26,16 @@
 import time
 
 from w1thermsensor import W1ThermSensor
+from w1thermsensor import NoSensorFoundError
 import RPi.GPIO as GPIO
 import MAX31855 as MAX31855
 
 # board DS18S20 sensor
-#boardSensor = W1ThermSensor()
+try:
+  boardSensor = W1ThermSensor()
+except NoSensorFoundError:
+  boardSensor = None
+  print('DS18S20 Sensor not found!')
 
 # just creating the object will open the correct port and address lines
 remoteSensor = MAX31855.MAX31855()
@@ -43,18 +48,22 @@ def c_to_f(c):
 try:
   print('Press Ctrl-C to quit.')
   while True:
-    #temp = boardSensor.get_temperature()
-    #print('DS18S20 Temperature: {0:0.3F}C / {1:0.3F}F'.format(temp, c_to_f(temp)))
-
+    print()
+    if boardSensor != None:
+      try:
+        temp = boardSensor.get_temperature()
+        print('DS18S20 Temperature: {0:0.3F}C / {1:0.3F}F'.format(temp, c_to_f(temp)))
+      except KeyboardInterrupt:
+        break
     for n in range(0,3):
       temp = remoteSensor.readTempC(n)
       internal = remoteSensor.readInternalC(n)
       linearized = remoteSensor.readLinearizedTempC(n)
-      print('Thermocouple {0:d} Temperature: {1:0.3F}C / {2:0.3F}F'.format(n, temp, c_to_f(temp)))
-      print('      Internal Temperature: {0:0.3F}C / {1:0.3F}F'.format(internal, c_to_f(internal)))
-      print('    Linearized Temperature: {0:0.3F}C / {1:0.3F}F'.format(internal, c_to_f(internal)))
+      print('Thermocouple {0:d} Temperature: {1:0.2F}C / {2:0.2F}F'.format(n, temp, c_to_f(temp)))
+      #print('      Internal Temperature: {0:0.2F}C / {1:0.2F}F'.format(internal, c_to_f(internal)))
+      print('    Linearized Temperature: {0:0.2F}C / {1:0.2F}F'.format(internal, c_to_f(internal)))
     
-    time.sleep(1.0)
+    time.sleep(3.0)
 
 finally:
   # release GPIO stuff
