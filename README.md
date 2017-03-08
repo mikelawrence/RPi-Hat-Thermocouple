@@ -36,11 +36,7 @@ sudo ./eepflash.sh -w -f=eeprom_settings.eep -t=24c32
 For this Hat you will need to enable the SPI, I2C and 1-Wire interfaces. From the command line type
 `sudo raspi-config ` and follow the prompts to install SPI support in the kernel.
 
-<img src="meta/raspi-config-1.png" width="682">
-
-<img src="meta/raspi-config-2.png" width="682">
-
-<img src="meta/raspi-config-3.png" width="682">
+<img src="meta/raspi-config-1.png" width="291"><img src="meta/raspi-config-2.png" width="291"><img src="meta/raspi-config-3.png" width="291">
 
 Now follow the same actions but enabling the I2C and 1-Wire interfaces.
 
@@ -90,13 +86,16 @@ Got temperatures of 0 sensors:
 ### Using the MAX31855 SPI Thermocouple Converters
 The Thermocouple Hat design gets around the Raspberry Pi limitation of only two chip enables for the hardware SPI0 interface by adding a 74LVC139A 2to4 Decoder to CEO. The address lines of the 2to4 decoder are connected to GPIO24 and GPIO23 so when SPI0.CE0 is sent low only one of the Thermocouple converters will be selected according to the following logic.
 
-| GPIO23 | GPIO24 | Thermocouple |
-|--------|--------|--------------|
-| 0      | 0      | TC1          |
-| 0      | 1      | TC2          |
-| 1      | 0      | TC3          |
+| GPIO23 (Pin 16) | GPIO24 (Pin 18) | Thermocouple |
+|:---------------:|:---------------:|--------------|
+|        0        |        0        | TC1          |
+|        0        |        1        | TC2          |
+|        1        |        0        | TC3          |
+|        1        |        1        | Invalid      |
 
-[SPIDEV](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely installed but if not install it with `sudo apt-get install python3-spidev`.
+[Spidev](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely installed but if not install it with `sudo apt-get install python3-spidev`.
 
 # Acknowledgments
-[Adafruit](www.adafruit.com) released a guide to [configuring a RTC on a Raspberry Pi](https://cdn-learn.adafruit.com/downloads/pdf/adding-a-real-time-clock-to-raspberry-pi.pdf) that was extremely helpful is setting up the DS3231M RTC. If you are just looking to add a RTC to your Raspberry Pi then buy one from them.
+[Adafruit](www.adafruit.com) released a guide to [configuring a RTC on a Raspberry Pi](https://cdn-learn.adafruit.com/downloads/pdf/adding-a-real-time-clock-to-raspberry-pi.pdf) that was extremely helpful is setting up the DS3231M RTC. The MAX31855 code is based on an Adafruit [library](https://github.com/adafruit/Adafruit_Python_MAX31855).
+
+Adafruit has breakout boards for the key chips on this Hat here: [RTC](https://www.adafruit.com/products/3013) and [MAX31855](https://www.adafruit.com/products/269). They support the open soruce/hardware community so support them.
