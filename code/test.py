@@ -30,7 +30,7 @@ from w1thermsensor import NoSensorFoundError
 import RPi.GPIO as GPIO
 import MAX31855 as MAX31855
 
-# board DS18S20 sensor
+# DS18S20 sensor on PCB
 try:
   boardSensor = W1ThermSensor()
 except NoSensorFoundError:
@@ -52,16 +52,23 @@ try:
     if boardSensor != None:
       try:
         temp = boardSensor.get_temperature()
-        print('DS18S20 Temperature: {0:0.3F}C / {1:0.3F}F'.format(temp, c_to_f(temp)))
+        print('DS18S20 on PCB: {0:0.2F}C / {1:0.2F}F'.format(temp, c_to_f(temp)))
       except KeyboardInterrupt:
         break
     for n in range(0,3):
-      temp = remoteSensor.readTempC(n)
-      internal = remoteSensor.readInternalC(n)
-      linearized = remoteSensor.readLinearizedTempC(n)
-      print('Thermocouple {0:d} Temperature: {1:0.2F}C / {2:0.2F}F'.format(n, temp, c_to_f(temp)))
-      #print('      Internal Temperature: {0:0.2F}C / {1:0.2F}F'.format(internal, c_to_f(internal)))
-      print('    Linearized Temperature: {0:0.2F}C / {1:0.2F}F'.format(internal, c_to_f(internal)))
+      tempState = remoteSensor.readState(n)
+      temp = remoteSensor.readLinearizedTempC(n)
+      if tempState['fault']:
+        # there is a fault in the reading
+        if tempState['openCircuit']:
+          error = 'No thermocouple connected'
+        elif tempState['shortGND']:
+          error = 'Thermocouple shorted to ground'
+        elif tempState['shortVCC']:
+          error = 'Thermocouple shorted to VCC';
+        print('Thermocouple {0:d}: Error - {1}'.format(n, error))
+      else:
+        print('Thermocouple {0:d}: {1:0.2F}C / {2:0.2F}F'.format(n, temp, c_to_f(temp)))
     
     time.sleep(3.0)
 

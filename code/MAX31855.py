@@ -37,7 +37,7 @@ class MAX31855(object):
     def __init__(self):
         ''' Initialize hardware SPI interface to MAX31855 devices
         '''
-        self._logger = logging.getLogger('TCHat.MAX31855')
+        self._logger = logging.getLogger('MAX31855')
         self._spi = SPI.SpiDev()
         self._spi.open(MAX31855.PORT, MAX31855.DEVICE)
         self._spi.max_speed_hz=(500000)
@@ -95,8 +95,11 @@ class MAX31855(object):
         '''Return the NIST-linearized thermocouple temperature value in degrees celsius.
         See https://learn.adafruit.com/calibrating-sensors/maxim-31855-linearization for more info.
         '''
+        v = self.readTempC(n)
+        if v == float('NaN'):
+            return float('NaN')
         # MAX31855 thermocouple voltage reading in mV
-        thermocoupleVoltage = (self.readTempC(n) - self.readInternalC(n)) * 0.041276
+        thermocoupleVoltage = (v - self.readInternalC(n)) * 0.041276
         # MAX31855 cold junction voltage reading in mV
         coldJunctionTemperature = self.readInternalC(n)
         coldJunctionVoltage = (-0.176004136860E-01 +
