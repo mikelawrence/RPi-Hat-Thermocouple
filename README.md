@@ -28,10 +28,12 @@ cd ~/Documents/RPi-Hat-Thermocouple/eeprom/
 make all
 ./eepmake eeprom_settings.txt eeprom_settings.eep
 ```
-The last command writes the freshly generated and unique `eeprom_settings.eep` file but you must push and hold the write switch on the hat before executing this command. By default the EEPROM on the hat is write protected. Pushing the write switch allows writes to occur while the switch is pushed.
+The next command writes the freshly generated and unique `eeprom_settings.eep` file to the EEPROM but you must push and hold the write switch on the hat before executing this command. By default the EEPROM on the hat is write protected. Pushing the write switch allows writes to occur while the switch is pushed.
 ```
 sudo ./eepflash.sh -w -f=eeprom_settings.eep -t=24c32
-
+```
+You will see the following if writing to the EEPROM was successful.
+```
 This will attempt to talk to an eeprom at i2c address 0x50. Make sure there is an eeprom at this address.
 This script comes with ABSOLUTELY no warranty. Continue only if you know what you are doing.
 Do you wish to continue? (yes/no): yes
@@ -41,33 +43,20 @@ Writing...
 117 bytes (117 B) copied, 2.31931 s, 0.1 kB/s
 Done.
 ```
-Now that the EEPROM has been programmed let's verify it worked by reading the EEPROM contents and converting back to a text file.
-```
-sudo ./eepflash.sh -r -f=eeprom_settings_read.eep -t=24c32
-```
-You will see the following if writing to the EEPROM was successful.
-```
-This will attempt to talk to an eeprom at i2c address 0x50. Make sure there is an eeprom at this address.
-This script comes with ABSOLUTELY no warranty. Continue only if you know what you are doing.
-Do you wish to continue? (yes/no): yes
-Reading...
-8+0 records in
-8+0 records out
-4096 bytes (4.1 kB) copied, 0.245512 s, 16.7 kB/s
-Done.
-```
 This is what you will see if there is a problem communicating with the EEPROM.
 ```
 This will attempt to talk to an eeprom at i2c address 0x50. Make sure there is an eeprom at this address.
 This script comes with ABSOLUTELY no warranty. Continue only if you know what you are doing.
 Do you wish to continue? (yes/no): yes
-Reading...
-dd: error reading ‘/sys/class/i2c-adapter/i2c-3/3-0050/eeprom’: Connection timed out
-0+0 records in
+Writing...
+dd: error writing ‘/sys/class/i2c-adapter/i2c-3/3-0050/eeprom’: Connection timed out
+0+1 records in
 0+0 records out
-0 bytes (0 B) copied, 0.0585557 s, 0.0 kB/s
+0 bytes (0 B) copied, 0.0539977 s, 0.0 kB/s
 Error doing I/O operation.
 ```
+If you succesfuly wrote the EEPROM there is nothing else left to do here.
+
 ### Setup Interfaces
 For this Hat you will need to enable the SPI, I2C and 1-Wire interfaces. From the command line type
 `sudo raspi-config ` and follow the prompts to install SPI support in the kernel.
@@ -115,7 +104,7 @@ The `UU` at address 68 means the RTC is currently in use by a driver or in other
 sudo apt-get -y remove fake-hwclock
 sudo update-rc.d -f fake-hwclock remove
 ```
-Next run `sudo nano /lib/udev/hwclock-set` and comment out the following lines. This put the original clock script back to normal.
+Next run `sudo nano /lib/udev/hwclock-set` and comment out the following lines. This puts the original clock script back to normal.
 ```
 #if [ -e /run/systemd/system ] ; then
 # exit 0
@@ -127,7 +116,7 @@ First make sure you have installed the CR1225 battery on the Hat. Next verify th
 date
 Fri Mar 10 16:52:48 CST 2017
 ```
-If the time is not correct connect the Raspberry Pi to a network via Ethernet or WiFi and allow it synchronize with Internet time servers. Or set the time manually. Once the time is correct issue this command `sudo hwclock -w`. This will set the RTC time to current system time. The next time the Raspberry Pi is booted it will get it's time from the RTC.
+If the time is not correct connect the Raspberry Pi to a network via Ethernet or WiFi and allow it synchronize with Internet time servers or set the time manually. Once the time is correct issue this command `sudo hwclock -w`. This will set the RTC time to current system time. The next time the Raspberry Pi is booted it will get it's time from the RTC.
 
 ### Using the DS18S20 1-Wire Thermometer
 [Here](https://github.com/timofurrer/w1thermsensor) is a nice 1-Wire python library that also supports command line reading of the temperature. This library is most likely installed but if not install it with `sudo apt-get install python3-w1thermsensor`.
@@ -148,10 +137,9 @@ The Thermocouple Hat design gets around the Raspberry Pi limitation of only two 
 |        1        |        0        | TC3          |
 |        1        |        1        | Invalid      |
 
-[Spidev](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely already installed but if not install it with `sudo apt-get install python3-spidev`. Assuming you already cloned this repository issue the following commands to see the DS18S20 PCB and thermocouple temperatures. Note when I ran the test on my board thre was only one connected thermocouple so the other MAX31855K's show as 'No thermocouple connected'.
+[Spidev](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely already installed but if not install it with `sudo apt-get install python3-spidev`. Assuming you already cloned this repository issue the following commands to see the DS18S20 PCB and thermocouple temperatures. Note when I ran the test on my board there was only one connected thermocouple so the other MAX31855K's show as 'No thermocouple connected'.
 ```
-cd ~/Documents/RPi-Hat-Thermocouple/code/
-./test.py
+~/Documents/RPi-Hat-Thermocouple/code/test.py
 Press Ctrl-C to quit.
 
 DS18S20 on PCB: 31.94C / 89.49F
