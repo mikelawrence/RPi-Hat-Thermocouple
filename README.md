@@ -70,7 +70,7 @@ It's time to reboot your Raspberry Pi with `sudo reboot`.
 ### Configuring the DS3231 RTC
 Now let's see if the RTC is is present on the I2C bus by running `sudo i2cdetect -y 1`. If you get a `command not found` you will need to install it with `sudo apt-get install python-smbus i2c-tools`. Looking at the output of the `i2cdetect` command you will see `68` in a field of `--` when the RTC is detected on the bus.
 ```
-sudo i2cdetect -y 1
+pi@raspberrypi:~ $ sudo i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- --
 10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -88,7 +88,7 @@ dtoverlay=i2c-rtc,ds3231
 ```
 Reboot again. Now when `sudo i2cdetect -y 1` is run we see:
 ```
-sudo i2cdetect -y 1
+pi@raspberrypi:~ $ sudo i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- -- -- -- -- -- -- -- -- -- -- -- --
 10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -111,9 +111,9 @@ Next run `sudo nano /lib/udev/hwclock-set` and comment out the following lines. 
 #fi
 ```
 ### Setting the time in the RTC
-First make sure you have installed the CR1225 battery on the Hat. Next verify the Raspberry Pi has the correct time by typing.
+First make sure you have installed the CR1225 battery on the Hat. Next verify the Raspberry Pi has the correct time by typing `date`.
 ```
-date
+pi@raspberrypi:~ $ date
 Fri Mar 10 16:52:48 CST 2017
 ```
 If the time is not correct connect the Raspberry Pi to a network via Ethernet or WiFi and allow it synchronize with Internet time servers or set the time manually. Once the time is correct issue this command `sudo hwclock -w`. This will set the RTC time to current system time. The next time the Raspberry Pi is booted it will get it's time from the RTC.
@@ -121,9 +121,9 @@ If the time is not correct connect the Raspberry Pi to a network via Ethernet or
 ### Using the DS18S20 1-Wire Thermometer
 [Here](https://github.com/timofurrer/w1thermsensor) is a nice 1-Wire python library that also supports command line reading of the temperature. This library is most likely installed but if not install it with `sudo apt-get install python3-w1thermsensor`.
 
-Now test the Thermocouple Hat's DS18S20 temperature sensor with
+Now test the Thermocouple Hat's DS18S20 temperature sensor with `pi@raspberrypi:~ $`.
 ```
-w1thermsensor all
+pi@raspberrypi:~ $ w1thermsensor all
 Got temperatures of 1 sensors:
   Sensor 1 (0008033f727f) measured temperature: 32.312 celsius
 ```
@@ -137,9 +137,9 @@ The Thermocouple Hat design gets around the Raspberry Pi limitation of only two 
 |        1        |        0        | TC3          |
 |        1        |        1        | Invalid      |
 
-[Spidev](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely already installed but if not install it with `sudo apt-get install python3-spidev`. Assuming you already cloned this repository issue the following commands to see the DS18S20 PCB and thermocouple temperatures. Note when I ran the test on my board there was only one connected thermocouple so the other MAX31855K's show as 'No thermocouple connected'.
+[Spidev](https://github.com/doceme/py-spidev) is a commonly used Python library for Raspberry Pi SPI programming. This library is most likely already installed but if not install it with `sudo apt-get install python3-spidev`. Assuming you already cloned this repository issue this command `~/Documents/RPi-Hat-Thermocouple/code/test.py` to see the DS18S20 PCB and thermocouple temperatures. Note when I ran the test on my board there was only one connected thermocouple so the other MAX31855K's show as 'No thermocouple connected'.
 ```
-~/Documents/RPi-Hat-Thermocouple/code/test.py
+pi@raspberrypi:~ $ ~/Documents/RPi-Hat-Thermocouple/code/test.py
 Press Ctrl-C to quit.
 
 DS18S20 on PCB: 31.94C / 89.49F
