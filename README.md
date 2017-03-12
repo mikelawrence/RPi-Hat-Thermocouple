@@ -3,15 +3,17 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 * Three MAX31855 Thermocouple Converters for remote temperature sensing
 * DS18S20 1-Wire Thermometer for local hat temperature
 * DS3231M I2C Real Time Clock for keeping the time when Raspberry is not connected to the internet
+* Magnetic Buzzer/Alert (Added with Rev 1.1)
 
 PCB is designed in [KiCad](http://kicad-pcb.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
 
-You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=00ba6ee981).
-
 ## Status
-Board has been ordered from OSH Park, assembled, and tested. The only issue I had was the DS18S20 footprint is a bit small but it does work.
-
-[![Click here to see the board on OSH Park and even order it!](https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png)](https://oshpark.com/shared_projects/kyDU2zJh)
+* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park and currently untested.
+  * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
+  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/5Qj2XX7P).
+* Rev 1.0 PCB has been ordered from OSH Park, assembled, and tested. It is fully operational.
+  * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=00ba6ee981).
+  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/kyDU2zJh).
 
 ## Board Preview
 <img src="meta/RPi-Hat-Thermocouple-brd.png" style="width:100%">

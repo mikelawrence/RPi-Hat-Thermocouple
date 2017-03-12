@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name raspberry-ml)(type KiCad)(uri /Users/mike/Documents/KiCAD/footprints/raspberry-ml.pretty)(options "")(descr "Footprints for the Raspberry Pi"))
+  (lib (name cui-ml)(type KiCad)(uri /Users/mike/Documents/KiCAD/footprints/cui-ml.pretty)(options "")(descr ""))
 )
