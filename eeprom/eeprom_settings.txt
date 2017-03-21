@@ -67,7 +67,7 @@ back_power 0
 setgpio   2     ALT0      DEFAULT
 setgpio   3     ALT0      DEFAULT
 #setgpio  4     INPUT     DEFAULT
-setgpio   5     OUTPUT    DEFAULT
+setgpio   5     OUTPUT    DOWN
 #setgpio  6     INPUT     DEFAULT
 setgpio   7     OUTPUT    NONE
 setgpio   8     OUTPUT    NONE
