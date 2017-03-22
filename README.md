@@ -145,9 +145,10 @@ The Thermocouple Hat design gets around the Raspberry Pi limitation of only two 
 ```
 pi@raspberrypi:~ $ ~/Documents/RPi-Hat-Thermocouple/code/test.py
 Press Ctrl-C to quit.
+Testing alert buzzer...
 
-DS18S20 on PCB: 31.94C / 89.49F
-Thermocouple 0: 23.49C / 74.28F
+DS18S20 on PCB: 28.88C / 83.97F
+Thermocouple 0: 21.63C / 70.93F
 Thermocouple 1: Error - No thermocouple connected
 Thermocouple 2: Error - No thermocouple connected
 ```
