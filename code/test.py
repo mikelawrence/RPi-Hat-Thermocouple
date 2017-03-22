@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Copyright (c) 2017 Mike Lawrence
-# 
+#
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -40,13 +40,23 @@ except NoSensorFoundError:
 # just creating the object will open the correct port and address lines
 remoteSensor = MAX31855.MAX31855()
 
+# turn alert signal into an output
+ALERT = 5
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(ALERT, GPIO.OUT)
+GPIO.output(ALERT, GPIO.LOW)
+
 # Define a function to convert celsius to fahrenheit.
 def c_to_f(c):
-        return c * 9.0 / 5.0 + 32.0
+  return c * 9.0 / 5.0 + 32.0
 
 # Loop printing measurements every second.
 try:
   print('Press Ctrl-C to quit.')
+  print("Testing alert buzzer...")
+  GPIO.output(ALERT, GPIO.HIGH)
+  time.sleep(1)
+  GPIO.output(ALERT, GPIO.LOW)
   while True:
     print()
     if boardSensor != None:
@@ -69,8 +79,8 @@ try:
         print('Thermocouple {0:d}: Error - {1}'.format(n, error))
       else:
         print('Thermocouple {0:d}: {1:0.2F}C / {2:0.2F}F'.format(n, temp, c_to_f(temp)))
-    
-    time.sleep(3.0)
+
+    time.sleep(1.0)
 
 finally:
   # release GPIO stuff
