@@ -8,11 +8,13 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 PCB is designed in [KiCad](http://kicad-pcb.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
 
 ## Status
-* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park and currently untested.
+* Rev 1.2 PCB added R7 to prevent the Alert Buzzer from sounding when powered on and until software turned it off. It will not be built or tested. R7 was added to a Rev 1.1 and it works nicely.
+  * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
+  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/T17HOHPK).
+* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park, assembled, and tested. It is fully operational.
   * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
   * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/5Qj2XX7P).
 * Rev 1.0 PCB has been ordered from OSH Park, assembled, and tested. It is fully operational.
-  * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=00ba6ee981).
   * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/kyDU2zJh).
 
 ## Board Preview
@@ -121,7 +123,7 @@ Fri Mar 10 16:52:48 CST 2017
 If the time is not correct connect the Raspberry Pi to a network via Ethernet or WiFi and allow it synchronize with Internet time servers or set the time manually. Once the time is correct issue this command `sudo hwclock -w`. This will set the RTC time to current system time. The next time the Raspberry Pi is booted it will get it's time from the RTC.
 
 ### Using the DS18S20 1-Wire Thermometer
-[Here](https://github.com/timofurrer/w1thermsensor) is a nice 1-Wire python library that also supports command line reading of the temperature. This library is most likely installed but if not install it with `sudo apt-get install python3-w1thermsensor`.
+[Here](https://github.com/timofurrer/w1thermsensor) is a nice 1-Wire python library that also supports command line reading of the temperature. If you get a 'command not found' then install it with `sudo apt-get install python3-w1thermsensor`.
 
 Now test the Thermocouple Hat's DS18S20 temperature sensor with `pi@raspberrypi:~ $`.
 ```
