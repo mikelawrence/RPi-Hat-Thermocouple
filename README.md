@@ -8,14 +8,11 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 PCB is designed in [KiCad](http://kicad-pcb.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
 
 ## Status
-* Rev 1.2 PCB added R7 to prevent the Alert Buzzer from sounding when powered on and until software turned it off. It will not be built or tested. R7 was added to a Rev 1.1 and it works nicely.
+* Rev 1.2 PCB added R7 to prevent the Alert Buzzer from sounding when powered on and until software turned it off. Since Rev 1.1 works so nicely I see no reason to order Rev 1.2. The Rev 1.1 boards I use have been modded to Rev 1.2 level.
   * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
   * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/T17HOHPK).
-* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park, assembled, and tested. It is fully operational.
-  * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
-  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/5Qj2XX7P).
+* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park, assembled, and tested. The Alert Buzzer sounds as soon as the board is powered. Rev 1.2 fixes this problem.
 * Rev 1.0 PCB has been ordered from OSH Park, assembled, and tested. It is fully operational.
-  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/kyDU2zJh).
 
 ## Board Preview
 <img src="meta/RPi-Hat-Thermocouple-brd.png" style="width:100%">
