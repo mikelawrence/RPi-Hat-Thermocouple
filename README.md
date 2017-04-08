@@ -8,10 +8,14 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 PCB is designed in [KiCad](http://kicad-pcb.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
 
 ## Status
-* Rev 1.2 PCB added R7 to prevent the Alert Buzzer from sounding when powered on and until software turned it off. Since Rev 1.1 works so nicely I see no reason to order Rev 1.2. The Rev 1.1 boards I use have been modded to Rev 1.2 level.
+* Rev 1.2 PCB  has been ordered from OSH Park but has NOT been tested yet.
+  * Added R7 to prevent the Alert Buzzer from sounding when powered on.
+  * Added Analog Power LDO Regulator to help with noise on the MAX31855's temperature readings. Not clear if this will help.
   * You can order parts from Mouser using this [shared BOM](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=20F70B46A4).
-  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/T17HOHPK).
-* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park, assembled, and tested. The Alert Buzzer sounds as soon as the board is powered. Rev 1.2 fixes this problem.
+  * You can order the PCB from OSH Park using this [link](https://oshpark.com/shared_projects/3POTkoNz).
+* Rev 1.1 PCB added an Alert Buzzer and has been ordered from OSH Park, assembled, and tested.
+  * The Alert Buzzer sounds as soon as the board is powered. Adding a pulldown to base of NUD3124 fixes the problem.
+  * There is occasional noise in the temperature readings from the MAX31855's.
 * Rev 1.0 PCB has been ordered from OSH Park, assembled, and tested. It is fully operational.
 
 ## Board Preview
