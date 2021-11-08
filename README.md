@@ -5,7 +5,7 @@ This is a [Raspberry Pi B+ Hat](https://github.com/raspberrypi/hats) PCB that su
 * DS3231M I2C Real Time Clock for keeping the time when Raspberry is not connected to the internet
 * Magnetic Buzzer/Alert (Added with Rev 1.1)
 
-PCB is designed in [KiCad](http://kicad-pcb.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
+PCB is designed in [KiCad](http://kicad.org) which is a great free EDA toolset and is based on [RPi_Hat_Template](https://github.com/xesscorp/RPi_Hat_Template) by XESS Corp.
 
 ## Status
 * Rev 1.2 PCB  has been ordered from OSH Park but has NOT been tested yet.
